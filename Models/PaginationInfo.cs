@@ -1,4 +1,4 @@
-﻿namespace Intex_Defaults.Models.ViewModels
+﻿namespace IntexLego.Models.ViewModels
 {
     public class PaginationInfo
     {

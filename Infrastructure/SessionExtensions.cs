@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace Intex_Defaults.Infrastructure
+namespace IntexLego.Infrastructure
 {
     public static class SessionExtensions
     {

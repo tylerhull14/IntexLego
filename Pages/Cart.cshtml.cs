@@ -1,9 +1,9 @@
-using Intex_Defaults.Infrastructure;
-using Intex_Defaults.Models;
+using IntexLego.Infrastructure;
+using IntexLego.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Intex_Defaults.Pages
+namespace IntexLego.Pages
 {
     public class CartModel : PageModel
     {

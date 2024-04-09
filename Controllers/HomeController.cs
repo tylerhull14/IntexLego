@@ -1,5 +1,5 @@
-using Intex_Defaults.Models;
-using Intex_Defaults.Models.ViewModels;
+using IntexLego.Models;
+using IntexLego.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
 using System.Diagnostics;
@@ -71,29 +71,29 @@ namespace IntexLego.Controllers
         {
             return View();
         }
-        public IActionResult AdminOrders(bool? fraud, int pageNum = 1) // we will want to pass in the fradulent bool here so that we can filter.
-        {
-            int pageSize = 5;
-            var PageInfo = new DefaultListViewModel
-            {
-                Products = _repo.Products
-                .Where(x => x.PrimaryColor == primaryColor || primaryColor == null)
-                .OrderBy(x => x.ProductId)
-                .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
+        //public IActionResult AdminOrders(int? fraud, int pageNum = 1) // we will want to pass in the fradulent bool here so that we can filter.
+        //{
+        //    int pageSize = 5;
+        //    var PageInfo = new DefaultListViewModel
+        //    {
+        //        Products = _repo.Products
+        //        .Where(x => x.PrimaryColor == primaryColor || primaryColor == null)
+        //        .OrderBy(x => x.ProductId)
+        //        .Skip((pageNum - 1) * pageSize)
+        //        .Take(pageSize),
 
-                PaginationInfo = new PaginationInfo
-                {
-                    CurrentPage = pageNum,
-                    ItemsPerPage = pageSize,
-                    TotalItems = primaryColor == null ? _repo.Products.Count() : _repo.Products.Where(x => x.PrimaryColor == primaryColor).Count()
-                },
+        //        PaginationInfo = new PaginationInfo
+        //        {
+        //            CurrentPage = pageNum,
+        //            ItemsPerPage = pageSize,
+        //            TotalItems = primaryColor == null ? _repo.Products.Count() : _repo.Products.Where(x => x.PrimaryColor == primaryColor).Count()
+        //        },
 
-                CurrentPrimaryColor = primaryColor
-            };
+        //        CurrentPrimaryColor = primaryColor
+        //    };
 
-            return View(PageInfo);
-        }
+        //    return View(PageInfo);
+        //}
         public IActionResult AdminProducts()
         {
             return View();

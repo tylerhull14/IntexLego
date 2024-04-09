@@ -1,8 +1,8 @@
-﻿using Intex_Defaults.Infrastructure;
-using Intex_Defaults.Models;
+﻿using IntexLego.Infrastructure;
+using IntexLego.Models;
 using System.Text.Json.Serialization;
 
-namespace Intex_Defaults.Models
+namespace IntexLego.Models
 {
     public class SessionCart : Cart
     {

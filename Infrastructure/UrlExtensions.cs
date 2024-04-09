@@ -1,4 +1,4 @@
-﻿namespace Intex_Defaults.Infrastructure
+﻿namespace IntexLego.Infrastructure
 {
     public static class UrlExtensions
     {

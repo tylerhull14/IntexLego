@@ -1,10 +1,10 @@
 ﻿
-namespace Intex_Defaults.Models
+namespace IntexLego.Models
 {
     public class EF_Repository : I_Repository
     {
-        private Default_Context _defaultContext;
-        public EF_Repository(Default_Context temp)
+        private IntexDataContext _defaultContext;
+        public EF_Repository(IntexDataContext temp)
         {
             _defaultContext = temp;
         }

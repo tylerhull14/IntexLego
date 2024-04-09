@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using Intex_Defaults.Models.ViewModels;
+using IntexLego.Models.ViewModels;
 
-namespace Intex_Defaults.Infrastructure
+namespace IntexLego.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-model")]
     public class PaginationTagHelper : TagHelper

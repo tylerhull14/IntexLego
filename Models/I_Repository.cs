@@ -1,4 +1,4 @@
-﻿namespace Intex_Defaults.Models
+﻿namespace IntexLego.Models
 {
     public interface I_Repository
     {

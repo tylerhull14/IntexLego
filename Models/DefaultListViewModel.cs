@@ -1,6 +1,6 @@
-﻿using Intex_Defaults.Models.ViewModels;
+﻿using IntexLego.Models.ViewModels;
 
-namespace Intex_Defaults.Models.ViewModels
+namespace IntexLego.Models.ViewModels
 {
     public class DefaultListViewModel
     {

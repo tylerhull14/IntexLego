@@ -21,7 +21,7 @@
 <h4>The things in the database should show up below:</h4>
 @foreach (Product d in Model.Products)
 {
-    <partial name="DefaultPartialView" model="d" />
+    <partial name="SingleProductPartial" model="d" />
 }
 
 @* <a asp-controller="Home" asp-action="Index" asp-route-pageNum="1">1</a>

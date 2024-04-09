@@ -1,7 +1,7 @@
 ﻿using IntexLego.Models;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace Intex_Defaults.Models
+namespace IntexLego.Models
 {
     public class Cart
     {
