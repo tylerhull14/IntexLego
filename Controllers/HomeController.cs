@@ -8,6 +8,11 @@ namespace IntexLego.Controllers
 {
     public class HomeController : Controller
     {
+        public IActionResult IndexHome()
+        {
+            return View("IndexHome");
+        }
+
         private I_Repository _repo;
         public HomeController(I_Repository temp)
         {
