@@ -2,27 +2,100 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model DefaultListViewModel
+<section class="home" id="home">
 
-<h1>Aurora Bricks</h1>
-<p>
-    Welcome to the vibrant world of Aurora Bricks, where your imagination comes to life one brick at a time!
-    As a master builder, I'm dedicated to crafting custom LEGO sets that spark creativity, challenge the mind,
-    and provide endless hours of fun. Whether you're a seasoned collector, a passionate hobbyist, or looking
-    for the perfect unique gift, my creations are designed to inspire builders of all ages. Dive into my
-    collection and discover bespoke LEGO sets that transform ordinary building into extraordinary creations.
-</p>
+    <div class="content">
+        <h3>Escape</h3>
+        <span> with Shadow the Hedgehog </span>
+        <p>Action play and thrills boost the creative fun in this cool LEGO® Sonic the Hedgehog™ Shadow the 
+            Hedgehog Escape toy for kids. </p>
+        <a href="#" class="btn">Shop now</a>
+    </div>
 
-<h4>The things in the database should show up below:</h4>
-@foreach (Product d in Model.Products)
-{
-    <partial name="SingleProductPartial" model="d" />
-}
+</section>
 
-@* <a asp-controller="Home" asp-action="Index" asp-route-pageNum="1">1</a>
-<a asp-controller="Home" asp-action="Index" asp-route-pageNum="2">2</a>
-<a asp-controller="Home" asp-action="Index" asp-route-pageNum="3">3</a> *@
+<section class="products" id="products">
 
-<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
-     page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
-     page-url-Name="@Model.CurrentPrimaryColor" class="btn-group pull-right m-1"></div>
+    <h1 class="heading">Best <span>Sellers</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="~/images/lego1.jpg" />
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lego Set 1</h3>
+                <div class="price">$70.99<span$62.99></span$62.99></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="~/images/lego1.jpg" />
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lego Set 1</h3>
+                <div class="price">$70.99<span$62.99></span$62.99></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="~/images/lego1.jpg" />
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lego Set 1</h3>
+                <div class="price">$70.99<span$62.99></span$62.99></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* icons at the bottom of page*@
+<section class="icons-container">
+
+    <div class="icons">
+        <img src="~/images/free-shipping.png" />
+        <h3>Free shipping</h3>
+        <span>on orders above $50</span>
+    </div>
+
+    <div class="icons">
+        <img src="~/images/money-bag.png" />
+        <h3>10 days returns</h3>
+        <span>moneyback guarantee</span>
+    </div>
+
+    <div class="icons">
+        <img src="~/images/gift-card.png" />
+        <h3>Offer & gifts</h3>
+        <span>on all orderes</span>
+    </div>
+
+    <div class="icons">
+        <img src="~/images/secure-payment.png" />
+        <h3>Secure payments</h3>
+        <span>We keep you protected</span>
+    </div>
+
+</section>

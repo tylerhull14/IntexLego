@@ -20,11 +20,14 @@
 
         <a href="#" class="logo">Aurora Bricks</a>
 
+        @await RenderSectionAsync("Scripts", required: false)
+
+
         <nav class="navbar">
-            <a asp-area="" asp-controller="Home" asp-action="IndexHome">Home</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
             <a asp-area="" asp-controller="Home" asp-action="About">About</a>
-            <a asp-area="" asp-controller="Home" asp-action="IndexHome">Lego Sets</a>
-            <a asp-area="" asp-controller="Home" asp-action="IndexHome">Sign In</a>
+            <a asp-area="" asp-controller="Home" asp-action="ListProducts">Lego Sets</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
         </nav>
         <div class="icons">
             <a href="#" class="fas fa-heart"></a>
@@ -45,7 +48,7 @@
         <div class="box-container">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a asp-area="" asp-controller="Home" asp-action="IndexHome">Home</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                 <a asp-area="" asp-controller="Home" asp-action="Products">Lego Sets</a>
                 <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
