@@ -8,9 +8,9 @@ namespace IntexLego.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult IndexHome()
+        public IActionResult Index()
         {
-            return View("IndexHome");
+            return View();
         }
 
         private I_Repository _repo;
@@ -19,29 +19,6 @@ namespace IntexLego.Controllers
             _repo = temp;
         }
 
-        public IActionResult Index(string? primaryColor, int pageNum = 1) // name this pageNum, because "page" means something to the .NET environment
-        {
-            int pageSize = 5;
-            var PageInfo = new DefaultListViewModel
-            {
-                Products = _repo.Products
-                .Where(x => x.PrimaryColor == primaryColor || primaryColor == null)
-                .OrderBy(x => x.ProductId)
-                .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
-
-                PaginationInfo = new PaginationInfo
-                {
-                    CurrentPage = pageNum,
-                    ItemsPerPage = pageSize,
-                    TotalItems = primaryColor == null ? _repo.Products.Count() : _repo.Products.Where(x => x.PrimaryColor == primaryColor).Count()
-                },
-
-                CurrentPrimaryColor = primaryColor
-            };
-
-            return View(PageInfo);
-        }
 
         public IActionResult ListProducts(string? primaryColor, int pageNum = 1) // name this pageNum, because "page" means something to the .NET environment
         {
