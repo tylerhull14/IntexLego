@@ -12,6 +12,11 @@ namespace IntexLego.Controllers
         {
             return View();
         }
+        
+        public IActionResult Products()
+        {
+            return View();
+        }
 
         private I_Repository _repo;
         public HomeController(I_Repository temp)
@@ -53,6 +58,7 @@ namespace IntexLego.Controllers
         {
             return View();
         }
+        
         //public IActionResult AdminOrders(int? fraud, int pageNum = 1) // we will want to pass in the fradulent bool here so that we can filter.
         //{
         //    int pageSize = 5;

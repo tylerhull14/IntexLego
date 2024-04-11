@@ -18,7 +18,7 @@
         <input type="checkbox" name="" id="toggler" />
         <label for="toggler" class="fas fa-bars"></label>
 
-        <a href="#" class="logo">Aurora Bricks</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">Aurora Bricks</a>
 
         @await RenderSectionAsync("Scripts", required: false)
 
@@ -26,7 +26,7 @@
         <nav class="navbar">
             <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
             <a asp-area="" asp-controller="Home" asp-action="About">About</a>
-            <a asp-area="" asp-controller="Home" asp-action="ListProducts">Lego Sets</a>
+            <a asp-area="" asp-controller="Home" asp-action="Products">Lego Sets</a>
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
         </nav>
         <div class="icons">
